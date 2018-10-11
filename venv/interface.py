@@ -1,8 +1,10 @@
 from tkinter import *
 
+def raise_frame(frame):
+    frame.tkraise()
+
 janela = Tk()
 
-janela = Tk();
 L = "800"
 A = "800"
 E = "100"
@@ -14,10 +16,20 @@ janela["bg"] = "blue"
 corJanela = janela["bg"]
 corReversa = "orange"
 
-menubar = Menu(janela)
+f1 = Frame(janela)
+f2 = Frame(janela)
+
+topo = janela.winfo_toplevel()
+
+menubar = Menu(topo)
 
 opt1 = Menu(menubar, tearoff = 0)
 
-janela.config(menu=menu)
+opt1.add_command(label="Cadastro de usuários", command=lambda: raise_frame(f1))
+opt1.add_command(label="Cadastro de produtos", command= "")
 
-opt1.add_command(label="Cadastro de usuários")
+menubar.add_cascade(label="Cadastros", menu=opt1)
+
+topo.config(menu=menubar)
+
+janela.mainloop()
