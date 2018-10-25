@@ -1,4 +1,5 @@
 from tkinter import *
+import venv
 
 def raise_frame(frame):
     frame.tkraise()
@@ -15,21 +16,21 @@ janela.title("Cadastro !")
 janela["bg"] = "blue"
 corJanela = janela["bg"]
 corReversa = "orange"
+#
+# f1 = Frame(janela, bg="orange")
+# f2 = Frame(janela, bg="orange")
+#
+# topo = janela.winfo_toplevel()
+#
+# menubar = Menu(topo)
+#
+# opt1 = Menu(menubar, tearoff = 0)
+#
+# opt1.add_command(label="Cadastro de usuários", command=lambda: raise_frame(f1))
+# opt1.add_command(label="Cadastro de produtos", command=lambda: raise_frame(f2))
 
-f1 = Frame(janela)
-f2 = Frame(janela)
-
-topo = janela.winfo_toplevel()
-
-menubar = Menu(topo)
-
-opt1 = Menu(menubar, tearoff = 0)
-
-opt1.add_command(label="Cadastro de usuários", command=lambda: raise_frame(f1))
-opt1.add_command(label="Cadastro de produtos", command= "")
-
-menubar.add_cascade(label="Cadastros", menu=opt1)
-
-topo.config(menu=menubar)
+# menubar.add_cascade(label="Cadastros", menu=opt1)
+#
+# topo.config(menu=menubar)
 
 janela.mainloop()
