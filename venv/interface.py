@@ -1,5 +1,5 @@
 from tkinter import *
-import venv
+from banco import *
 
 def raise_frame(frame):
     frame.tkraise()
@@ -16,6 +16,13 @@ janela.title("Cadastro !")
 janela["bg"] = "blue"
 corJanela = janela["bg"]
 corReversa = "orange"
+bd = Banco("localhost", "root", "", "livro")
+
+Entry
+
+Buton(janela, bg="blue", text="Cadastrar")
+
+
 #
 # f1 = Frame(janela, bg="orange")
 # f2 = Frame(janela, bg="orange")
